@@ -10,7 +10,7 @@ import 'package:diet_plan_app/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'mothly.dart';
+import 'monthly.dart';
 
 class AppColors {
   AppColors._();

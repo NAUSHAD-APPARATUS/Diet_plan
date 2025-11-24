@@ -1,5 +1,5 @@
-import 'package:diet_plan_app/Meals/SecondScreen.dart';
-import 'package:diet_plan_app/Home/firstScreen.dart';
+import 'package:diet_plan_app/Meals/meals.dart';
+import 'package:diet_plan_app/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:diet_plan_app/firebase_options.dart';

@@ -28,6 +28,7 @@ class DietPlanApp extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Scaffold(body: Center(child: CircularProgressIndicator()));
           }
+
           if (snapshot.hasData) {
             return const HomeScreen();
           }

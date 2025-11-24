@@ -45,7 +45,6 @@ class _OtpScreenState extends State<OtpScreen> {
       await FirebaseAuth.instance.signInWithCredential(credential);
       //FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
 
-      // Ensure currentUser is up-to-date (useful on web)
       await FirebaseAuth.instance.currentUser?.reload();
       final user = FirebaseAuth.instance.currentUser;
 
@@ -56,7 +55,6 @@ class _OtpScreenState extends State<OtpScreen> {
         return;
       }
 
-      // Navigate directly to Home (no Firestore checks)
       Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
             (route) => false,
