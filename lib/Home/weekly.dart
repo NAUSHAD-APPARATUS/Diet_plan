@@ -4,6 +4,7 @@ class AppColors {
   AppColors._();
 
   static const Color primary = Color(0xFF00AF54);
+  static const bgColor = Color(0xFFececec);
 }
 
 class weeklyScreen extends StatefulWidget {
@@ -16,46 +17,49 @@ class weeklyScreen extends StatefulWidget {
 class _weeklyScreenState extends State<weeklyScreen>{
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          Wrap(                         // <- changed from Row to Wrap
-            spacing: 16,
-            runSpacing: 16,
-            alignment: WrapAlignment.center,
-            children: const [
-              CaloriesCard(
-                progress: 0.60,
-                title: "Calories",
-                icon: Icons.local_fire_department_outlined,
-                centerText: "kcal",
-                color: AppColors.primary,
-              ),
-              CaloriesCard(
-                progress: 0.30,
-                title: "Fats",
-                icon: Icons.lunch_dining_outlined,
-                centerText: "fats",
-                color: Colors.pinkAccent,
-              ),
-              CaloriesCard(
-                progress: 0.25,
-                title: "Proteins",
-                icon: Icons.egg_outlined,
-                centerText: "proteins",
-                color: Colors.blueAccent,
-              ),
-              CaloriesCard(
-                progress: 0.40,
-                title: "Carbs",
-                icon: Icons.rice_bowl_outlined,
-                centerText: "carbs",
-                color: Colors.deepPurpleAccent,
-              ),
-            ],
-          ),
-        ],
+    return Scaffold(
+      backgroundColor: AppColors.bgColor,
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Wrap(                         // <- changed from Row to Wrap
+              spacing: 16,
+              runSpacing: 16,
+              alignment: WrapAlignment.center,
+              children: const [
+                CaloriesCard(
+                  progress: 0.60,
+                  title: "Calories",
+                  icon: Icons.local_fire_department_outlined,
+                  centerText: "kcal",
+                  color: AppColors.primary,
+                ),
+                CaloriesCard(
+                  progress: 0.30,
+                  title: "Fats",
+                  icon: Icons.lunch_dining_outlined,
+                  centerText: "fats",
+                  color: Colors.pinkAccent,
+                ),
+                CaloriesCard(
+                  progress: 0.25,
+                  title: "Proteins",
+                  icon: Icons.egg_outlined,
+                  centerText: "proteins",
+                  color: Colors.blueAccent,
+                ),
+                CaloriesCard(
+                  progress: 0.40,
+                  title: "Carbs",
+                  icon: Icons.rice_bowl_outlined,
+                  centerText: "carbs",
+                  color: Colors.deepPurpleAccent,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

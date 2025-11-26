@@ -15,6 +15,7 @@ import 'monthly.dart';
 class AppColors {
   AppColors._();
   static const primary = Color(0xFF00AF54);
+  static const bgColor = Color(0xFFececec);
 }
 
 void main() async {
@@ -59,6 +60,7 @@ class _firstScreenState extends State<firstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.bgColor,
       body: Column(
         children: [
           Container(
